@@ -1,13 +1,22 @@
-запуск проекта в терминале
+# Проект Tickets
+
+## Быстрый запуск
+
+```bash
+# Клонирование репозитория
 git clone https://github.com/VyacheKuzne/-
 cd -
+
+# Установка зависимостей
 npm install --legacy-peer-deps
 composer install
+
+# Настройка окружения
 copy .env.example .env
 php artisan key:generate
 
+В файле .env замените строчки на эти:
 
-в файле .env меняем строчки на эти
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -15,15 +24,21 @@ DB_DATABASE=laravel_test
 DB_USERNAME=root
 DB_PASSWORD=root
 
+Создайте базу данных в MySQL:
+CREATE DATABASE laravel_test; (пароль: root)
 
-заходим в mysql 
-CREATE DATABASE laravel_test;
 
-затем в терминале
-php artisan test --filter=RequestRaceTest запускаем тесты чтобы проверить проект
+# Запуск тестов
+php artisan test --filter=RequestRaceTest
+
+# Сброс миграций и заполнение тестовыми данными
 php artisan migrate:reset
 php artisan db:seed
+
+# Запуск сервера (в первом терминале)
 php artisan serve
+
+# Сборка фронтенда (во втором терминале)
 npm run dev
 
 
