@@ -1,3 +1,33 @@
+запуск проекта в терминале
+git clone https://github.com/VyacheKuzne/-
+cd -
+npm install --legacy-peer-deps
+composer install
+copy .env.example .env
+php artisan key:generate
+
+
+в файле .env меняем строчки на эти
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_test
+DB_USERNAME=root
+DB_PASSWORD=root
+
+
+заходим в mysql 
+CREATE DATABASE laravel_test;
+
+затем в терминале
+php artisan test --filter=RequestRaceTest запускаем тесты чтобы проверить проект
+php artisan migrate:reset
+php artisan db:seed
+php artisan serve
+npm run dev
+
+
+запускаем проект
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -61,4 +91,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 
-запуск проекта 
+
