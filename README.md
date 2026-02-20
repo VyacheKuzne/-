@@ -28,7 +28,9 @@ DB_PASSWORD=root
 CREATE DATABASE laravel_test; (пароль: root)
 
 
-# Запуск тестов
+
+
+# Запуск тестов в том числе race 
 php artisan test --filter=RequestRaceTest
 
 # Сброс миграций и заполнение тестовыми данными
@@ -41,6 +43,9 @@ php artisan serve
 # Сборка фронтенда (во втором терминале)
 npm run dev
 
+Тестовые пользователи: 
+Дитпетчер: admin2@test.com ; password
+мастер: master1@test.com ; password
 
 запускаем проект
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
